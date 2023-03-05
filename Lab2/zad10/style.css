@@ -1,0 +1,141 @@
+:root{
+    --o1: #fdbb26;
+    --o2: #fe8e49;
+    --ot: rgba(253, 187, 38,0.8);
+    --g1: #79d379;
+    --g2: #48bf96;
+    --gt: rgba(72, 191, 150,0.8);
+
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(94, 94, 94);
+    font-size: 15px;
+}
+img{
+    width: 100%;
+    height: auto;
+
+}
+figure{
+    position: relative;
+}
+
+.flip{
+    display: inline-block;
+    margin: 10px;
+    background-color: transparent;
+    perspective: 1500px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    height: 450px;
+    width: 300px;
+
+}
+.center{
+    position: relative;
+
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 10px 4px;
+    width: 100%;
+    height: 100%;
+}
+.flip:hover .center{
+    transform: rotateY(180deg);
+}
+.front, .back{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+.front{
+    background-color: rgb(255, 255, 255);
+    
+}
+
+hr{
+    width: 70%;
+    color: rgb(241, 241, 241);
+    opacity: 0.5;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.back {
+    
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+figcaption{
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+}
+figcaption p{
+    color:white;
+    width: fit-content;
+    opacity: 0.9;
+    margin: 0;
+    padding: 7px;
+}
+.back p{
+    color:white;
+    
+}
+.back p:nth-child(1){
+    font-size: 15px;
+}
+.back p:nth-child(2){
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+button{
+    color: rgb(94, 94, 94);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+}
+
+.cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+}
+figure{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.flip:nth-child(1) .back{
+    background-image:linear-gradient(135deg,var(--o1),var(--o2));
+}
+.flip:nth-child(1) figcaption p{
+    background-image: linear-gradient(135deg,var(--o1),var(--o2));
+}
+.flip:nth-child(1) .cover{
+    background-image: linear-gradient(175deg, var(--ot) 90%,white 90.5%);
+}
+.flip:nth-child(2) .back{
+    background-image:linear-gradient(135deg,var(--g1),var(--g2));
+}
+.flip:nth-child(2) figcaption p{
+    background-image: linear-gradient(135deg,var(--g1),var(--g2));
+}
+.flip:nth-child(2) .cover{
+    background-image: linear-gradient(175deg, var(--gt) 90%,white 90.5%);
+}

@@ -1,0 +1,34 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input{
+    display:block;
+}
+img{
+    width: 20px;
+    height: auto;
+}
+.r{
+    display: flex;
+    flex-direction:row;
+    margin: 5px 0 5px 0;
+}
+.r p{
+    margin: 0 0 0 5px;
+}
+.input-password{
+    position: relative;
+    width: fit-content;
+}
+.input-password img{
+    width: 20px;
+    height: auto;
+    position: absolute;
+    right: 3px;
+    bottom: 4px;
+}
+.input-password input{
+    width: 200px;
+    height: 20px;
+    margin:10px 0 10px 0;
+}

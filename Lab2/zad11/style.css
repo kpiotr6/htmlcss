@@ -1,0 +1,125 @@
+*{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu{
+    /* background-color: #fc68b2; */
+    width: 200px;
+    position: relative;
+
+}
+.menu-element{
+    background-color: #fc68b2;
+    border-bottom: 1px solid #ef584a; 
+}
+[type="radio"]{
+    display: none;
+}
+.sub-menu label{
+    position:relative;
+    display: block;
+    height: 20px;
+    padding: 5px 0 5px 20px;
+    overflow: hidden;
+    background-color: #273057;
+}
+.main-label{
+    max-height: fit-content;
+    overflow: visible;
+
+}
+.cover{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    /* background-color: blue; */
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+}
+label{
+    display: block;
+}
+.menu-element{
+    position: relative;
+}
+[name="show"]:checked + div .menu-element .cover {
+    display: block;
+}
+[name="show"]:checked + div .sub-menu label{
+    height: 20px;
+    padding: 5px 0 5px 20px;
+}
+[name="show"]:checked + div .sub-menu{
+    max-height: 500px;
+    transition: max-height 2s;
+}
+[name="show"]:checked + div .menu-element{
+    background-color:#d62c2f;
+}
+.sub-menu input:checked + label::before{
+    content: '';
+    position: absolute;
+    width: 0px; 
+    height: 0;
+    left: -1px;
+    top: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 10px solid white;
+    z-index: 2;
+}
+.sub-menu input:checked + label::after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0;
+    right: -1px;
+    top: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 10px solid white;
+    z-index: 2;
+}
+.sub-menu input:checked + label .sub-menu-highlight{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    position:absolute;
+    bottom: 0;
+    left:0;
+    opacity: 0.2;
+    z-index: 1;
+}
+#menu4 .menu-element{
+    border: 0;
+}
+#menu1 .menu-element{
+    border-radius: 10px 10px 0 0;
+}
+
+#menu4 .menu-element{
+    border-radius: 0px 0px 10px 10px;
+}
+#rad4:checked + .menu .menu-element {
+    border-radius: 0;
+}
+.sub-menu{
+    max-height: 0;
+    transition: max-height 1s;
+    overflow: hidden;
+}

@@ -1,0 +1,118 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    font-weight: 100;
+    font-size: 30px;
+    margin-top: 0;
+}
+body{
+  background-image: linear-gradient(177deg, #057aec 25%, #ffffff 25.2%);
+  height: 1200px;
+}
+.header{
+    width: 50%;
+    margin: 20px 10% 0 5%;
+    color: #ffffff;
+    animation: left 2s;
+}
+.main{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+form{
+    background-color: white;
+    width: 30%;
+    margin: 20px 5% 0 5%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 5px #494949;
+    animation: right 2s;
+}
+
+form input{
+    box-sizing: border-box;
+    margin: 15px 0 15px 0;
+    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 5px;
+}
+form input[type=submit]{
+    background-color: #057aec;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+button{
+    background-color: transparent;
+    color: #ffffff;
+    width: fit-content;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border-color:#ffffff;
+    border-style: solid;
+}
+
+@media screen and (max-width: 600px) {
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    form, .header{
+        margin: 20px 0 20px 0;
+        width: 80%;
+    }
+    form{
+        animation: down 1s;
+        box-sizing: border-box;
+    }
+    .header{
+        animation: top 1s;
+    }
+}
+
+@keyframes left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+}
+@keyframes right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+}
+@keyframes top {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+}
+@keyframes down {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+}

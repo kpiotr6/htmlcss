@@ -1,0 +1,42 @@
+
+
+body{
+    
+ }
+.main-container{ 
+  
+     margin:0 auto;
+      border:solid 10px green;
+       padding:10px;
+        margin-top:40px;
+}
+.main-container *{
+    padding:10px;
+    background:#aaa;
+     border:dashed 5px #000;
+    }
+.main-container * + *{
+    margin-top:20px;
+}
+.main-header{
+  height:50px; 
+  background:#aaa; 
+  border-color:red;
+}
+.main-content{
+  min-height:1000px;
+}
+
+.main-header{
+    position:-webkit-sticky; 
+    position:sticky; 
+    top:0;
+}
+.tst{
+  display: grid;
+}
+.lol{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}

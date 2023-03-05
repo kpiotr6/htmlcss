@@ -1,0 +1,108 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    position: relative;
+    background-image: url('images/board-bg.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    overflow: hidden;
+    min-height: 800px;
+    display: flex;
+    /* cursor: none; */
+}
+.points{
+    position: absolute;
+    top: 10px;
+    right:40px;
+    font-size: 80px;
+    color:white;
+    font-weight: bolder;
+    margin: 0;
+}
+.center{
+    font-size: 40px;
+    color:white;
+    font-weight: bolder;
+    margin: auto;
+    text-align: center;
+
+}
+.zombie{
+    z-index: 1;
+    position: absolute;
+    /*top:0px;
+    left:20px; */
+    height: 300px;
+    aspect-ratio: 200 / 312;
+    background-size: cover;
+    background-image: url('images/walkingdead.png');
+    animation: animatedWalk 0.5s steps(9) infinite;
+}
+.inside{
+    position: absolute;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    top:85px;
+    left:85px; 
+    border-radius: 100%;
+    pointer-events: none;
+}
+.outside{
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    border-color: white;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 100%;
+    pointer-events: none;
+}
+.pointer{
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+}
+.name{
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 40px;
+    color:white;
+    font-weight: bolder;
+    z-index: 2000;
+}
+.data-table{
+    background-color: white;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin:auto;
+
+}
+.new-game{
+    position: absolute;
+    left: 30; 
+    right: 0; 
+    width: 200px;
+    height: 30px;
+}
+.data-table th, .data-table td{
+    height: 30px;
+    border:1px solid black;
+}
+@keyframes animatedWalk {
+    from
+    {
+        background-position: 0;
+    }
+    to
+    {
+        background-position: 100%;
+    }
+}

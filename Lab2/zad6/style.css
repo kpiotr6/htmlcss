@@ -1,0 +1,110 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button{
+
+    width: 40px;
+    height: 40px;
+    background-color: #f6d338;
+    border-radius: 10px;
+    display: none;
+}
+.button div{
+    height: 5px;
+    width: 30px;
+    background-color: #ffff;
+    margin: 2px 0 2px 0;
+    transition: transform 1s, opacity 1s;
+}
+
+#openmenu{
+    display: none;
+}
+.topbar{
+    position: absolute;
+    left:0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.mainmenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    
+
+}
+.mainmenu a{
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+h1{
+
+    width: 200px;
+    margin: 10px 0 10px 10px;
+}
+@media only screen and (max-width:800px) {
+    h1{
+        font-size: 15px;
+        width: 90px;
+    }
+    .button{
+        display: block;
+        margin-right: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainmenu{
+        background-color: #222222;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        top:50px;
+        left:0px;
+        align-items: flex-start;
+        position: absolute;
+        max-height: 0px;
+        transition: max-height 2s ease;
+    }
+    .mainmenu a{
+        text-decoration: none;
+        height: 30px;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        margin: 0px;
+        font-size: 13px;
+    }
+    #openmenu:checked ~ .mainmenu{
+        max-height: 200px;
+
+        transition: max-height 2s ease;
+
+    }
+    
+    #openmenu:checked ~ .button div:first-child{
+    
+        transform: translateY(9px) rotate(45deg);
+    }
+    #openmenu:checked ~ .button div:last-child{
+    
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    #openmenu:checked ~ .button div:nth-child(2){
+    
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+
+
+    
+}

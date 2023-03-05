@@ -1,0 +1,65 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.start div{
+    display: inline-block;
+}
+label{
+    display: block;
+}
+.collection{
+
+    height: 400px;
+    overflow: auto;
+}
+img{
+    width: 30px;
+}
+.entry{
+    overflow: auto;
+    box-sizing: border-box;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 1px 1px 3px 2px grey;
+
+}
+.delete{
+    justify-self: center;
+    align-self: center;
+}
+.entry div, .entry button{
+    margin:20px
+}
+.start{
+    width: fit-content;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 1px 1px 3px 2px grey;
+}
+[type="submit"], .start > div > input{
+    box-sizing: border-box;
+    width: 200px;
+    height: 30px;
+    margin:10px 10px 0 0;
+}
+[type="submit"]{
+    color: white;
+    background-color: #007f00;
+    border: none;
+    border-radius: 5px;
+}
+.delete{
+   padding: 8px;
+   background-color: #007f00;
+   border: none;
+   border-radius: 5px;
+   
+}
+.delete img{
+    filter:invert(100%);
+
+}
